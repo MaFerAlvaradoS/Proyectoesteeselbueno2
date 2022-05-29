@@ -24,12 +24,7 @@ const MedAp = () => {
             }}>
                 Medical appointment.
             </Heading>
-            {tab}
-            {tab}
-            <Image style={{ width: 350, height: 180, marginBottom: 15 }} source={require("./Imagenes/citas medicas.jpg")} />
-            <Button mt="2" colorScheme="indigo" title="Menu" onPress={() => navigation.navigate('Menu')} >
-                Menu
-            </Button>
+            
             <Box>
                 <Text>
                     This section summarizes all the information
