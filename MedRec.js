@@ -1,5 +1,7 @@
 import * as React from "react";
-import { Checkbox, Radio, Stack, AspectRatio, Icon, CheckIcon, WarningOutlineIcon, Select, Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider, Image } from "native-base";
+import { Checkbox, Radio, Stack, AspectRatio, Icon, CheckIcon, WarningOutlineIcon, 
+  Select, Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Center, 
+  NativeBaseProvider, Image } from "native-base";
 import { useNavigation } from '@react-navigation/native';
 import { Text, StyleSheet, Label } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -14,7 +16,7 @@ const Drawer = createDrawerNavigator()
 const MedRec = () => {
   const navigation = useNavigation();
   const tab = <>&nbsp;&nbsp;&nbsp;&nbsp;</>;
-
+  let [service, setService] = React.useState("");
   return (
     <Box safeArea p="2" py="8" w="90%" maxW="400">
       {tab}
