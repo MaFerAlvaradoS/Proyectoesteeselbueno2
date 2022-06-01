@@ -1,5 +1,6 @@
 import * as React from "react";
-import { CheckIcon, WarningOutlineIcon, Select, Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider, Image } from "native-base";
+import { CheckIcon, WarningOutlineIcon, Select, Box, Heading, VStack, 
+  FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider, Image, View } from "native-base";
 import { useNavigation } from '@react-navigation/native';
 import { Text, StyleSheet, Label } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";

@@ -1,5 +1,9 @@
 import * as React from "react";
-import { Stack, AspectRatio, Icon, CheckIcon, WarningOutlineIcon, Select, Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider, Image } from "native-base";
+import {
+  Stack, AspectRatio, Icon, CheckIcon, WarningOutlineIcon, Select,
+  Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Center,
+  NativeBaseProvider, Image, View
+} from "native-base";
 import { useNavigation } from '@react-navigation/native';
 import { Text, StyleSheet, Label } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -11,17 +15,22 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import Constants from 'expo-constants';
 
 const Drawer = createDrawerNavigator()
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#FFFFFF',
+    padding: 8,
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 10,
+    textAlign: 'center',
+  },
+});
 
 const DocSerInf = () => {
   const navigation = useNavigation();
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      paddingTop: Constants.statusBarHeight,
-      backgroundColor: '#FFFFFF',
-      padding: 8,
-    },
-  });
 
   return (
     <View style={styles.container}>
@@ -39,41 +48,39 @@ const DocSerInf = () => {
 
         </Heading>
 
-        <div style={{ display: 'flex', justifyContent: 'Middle', marginTop: '50px', marginRight: '300px' }}>
-          <table style={{ border: "3px solid rgb(0, 0, 0)" }} width="100%" className="Tablita"  >
+        <View style={styles.paragraph}>
+          <div style={{ display: 'flex', justifyContent: 'Middle', marginTop: '50px', marginRight: '300px' }}>
+            <table style={{ border: "1px )" }} width="100%" className="Tablita"  >
 
-            <tbody>
-              <tr>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> DR. Jorge Cedeño Velasco </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> Surgeon </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> 4491234567 </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> Jorge127@outlook.com </th>
-              </tr>
-              <tr>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> DRA. Itzel Reyes García  </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> General practitioner </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> 4491234567</th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> Itzel127@outlook.com </th>
-
-
-              </tr>
-              <tr>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> DR. Fernando Robles Casillas  </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> Orthopedic doctor </th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> 4491234567</th>
-                <th style={{ border: "3px solid rgb(0, 0, 0)" }}> Fernando127@outlook.com </th>
-
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <tbody>
+                <tr>
+                  <th style={{ border: "1px )" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
+                  <th style={{ border: "1px )" }}> DR. Jorge Cedeño Velasco </th>
+                  <th style={{ border: "1px )" }}> Surgeon </th>
+                  <th style={{ border: "1px )" }}> 4491234567 </th>
+                  <th style={{ border: "1px )" }}> Jorge127@outlook.com </th>
+                </tr>
+                <tr>
+                  <th style={{ border: "1px )" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
+                  <th style={{ border: "1px )" }}> DRA. Itzel Reyes García  </th>
+                  <th style={{ border: "1px )" }}> General practitioner </th>
+                  <th style={{ border: "1px )" }}> 4491234567</th>
+                  <th style={{ border: "1px )" }}> Itzel127@outlook.com </th>
 
 
+                </tr>
+                <tr>
+                  <th style={{ border: "1px )" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
+                  <th style={{ border: "1px )" }}> DR. Fernando Robles Casillas  </th>
+                  <th style={{ border: "1px )" }}> Orthopedic doctor </th>
+                  <th style={{ border: "1px )" }}> 4491234567</th>
+                  <th style={{ border: "1px )" }}> Fernando127@outlook.com </th>
 
-
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </View>
       </Box>
     </View>
 

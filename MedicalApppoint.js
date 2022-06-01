@@ -14,7 +14,7 @@ import Constants from 'expo-constants';
 const Drawer = createDrawerNavigator()
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 1, 
         justifyContent: 'center',
         paddingTop: Constants.statusBarHeight,
         backgroundColor: '#FFFFFF',
@@ -50,6 +50,7 @@ const MedAp = () => {
                     <Box>
                         <Text>
                             APPLICANT: Maria Luisa Ruiz
+                            &nbsp;
                             TELEPHONE: 449 198 2734
                         </Text>
                     </Box>

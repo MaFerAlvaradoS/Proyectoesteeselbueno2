@@ -1,5 +1,9 @@
 import * as React from "react";
-import { Stack, AspectRatio, Icon, CheckIcon, WarningOutlineIcon, Select, Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider, Image } from "native-base";
+import {
+  Stack, AspectRatio, Icon, CheckIcon, WarningOutlineIcon, Select, Box,
+  Heading, VStack, FormControl, Input, Link, Button, HStack, Center,
+  NativeBaseProvider, Image, View
+} from "native-base";
 import { useNavigation } from '@react-navigation/native';
 import { Text, StyleSheet, Label } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -27,8 +31,7 @@ const Prescriptions = () => {
     <View style={styles.container}>
       <Box safeArea p="2" py="8" w="90%" maxW="400">
 
-
-        <Heading size="lg" fontWeight="600" _dark={{
+        <Heading size="md" fontWeight="600" _dark={{
           color: "black"
         }}>
           Prescriptions
