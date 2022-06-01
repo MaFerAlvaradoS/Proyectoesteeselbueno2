@@ -30,7 +30,10 @@ const Catalogue = () => {
   return (
     <View style={styles.container}>
       <Box safeArea p="2" py="8" w="90%" maxW="400">
+        <VStack alignItems={"center"}>
+          <Button marginTop="2" colorScheme="indigo" title='Menu' onPress={() => navigation.navigate('Menu')} style={{ width: "40%" }}> Back</Button>
 
+        </VStack>
         <Heading size="lg" fontWeight="600" _dark={{
           color: "black"
         }}>

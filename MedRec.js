@@ -38,6 +38,11 @@ const MedRec = () => {
         {tab}
         {tab}
         {tab}
+        {tab}
+        <VStack alignItems={"center"}>
+          <Button marginTop="2" colorScheme="indigo" title='Menu' onPress={() => navigation.navigate('Menu')} style={{ width: "40%" }}> Back</Button>
+
+        </VStack>
         <Heading size="lg" fontWeight="600" _dark={{
           color: "black"
         }}>

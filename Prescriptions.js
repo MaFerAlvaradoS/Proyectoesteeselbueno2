@@ -29,6 +29,10 @@ const Prescriptions = () => {
 
   return (
     <View style={styles.container}>
+      <VStack alignItems={"center"}>
+        <Button marginTop="2" colorScheme="indigo" title='Menu' onPress={() => navigation.navigate('Menu')} style={{ width: "40%" }}> Back</Button>
+
+      </VStack>
       <Box safeArea p="2" py="8" w="90%" maxW="400">
 
         <Heading size="md" fontWeight="600" _dark={{

@@ -1,6 +1,8 @@
 import * as React from "react";
-import { CheckIcon, WarningOutlineIcon, Select, Box, Heading, VStack, 
-  FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider, Image, View } from "native-base";
+import {
+  CheckIcon, WarningOutlineIcon, Select, Box, Heading, VStack,
+  FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider, Image, View
+} from "native-base";
 import { useNavigation } from '@react-navigation/native';
 import { Text, StyleSheet, Label } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -23,6 +25,10 @@ const Schedule = () => {
   return (
     <View style={styles.container}>
       <Box safeArea p="2" py="8" w="90%" maxW="400">
+        <VStack alignItems={"center"}>
+          <Button marginTop="2" colorScheme="indigo" title='Menu' onPress={() => navigation.navigate('Menu')} style={{ width: "40%" }}> Back</Button>
+
+        </VStack>
         <Heading size="lg" fontWeight="600" _dark={{
           color: "black"
         }}>
@@ -46,7 +52,7 @@ const Schedule = () => {
             </FormControl.ErrorMessage>
           </FormControl>
         </Center>
-        
+
         <Center>
           <FormControl w="3/4" maxW="300" isRequired isInvalid>
             <FormControl.Label>Choose Doctor</FormControl.Label>
