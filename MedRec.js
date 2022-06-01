@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#FFFFFF',
-    padding: 8,
+    padding: 8
   },
 });
 
@@ -30,7 +30,14 @@ const MedRec = () => {
   const tab = <>&nbsp;&nbsp;&nbsp;&nbsp;</>;
   return (
     <View style={styles.container}>
-      <Box safeArea p="2" py="8" w="90%" maxW="400">
+      <Box safeArea p="2" py="8" w="70%" maxW="400">
+        {tab}
+        {tab}
+        {tab}
+        {tab}
+        {tab}
+        {tab}
+        {tab}
         <Heading size="lg" fontWeight="600" _dark={{
           color: "black"
         }}>
