@@ -22,8 +22,7 @@ const styles = StyleSheet.create({
     },
     paragraph: {
         margin: 24,
-        fontSize: 18,
-        fontWeight: 'bold',
+        fontSize: 14,
         textAlign: 'center',
     },
 });
@@ -33,9 +32,10 @@ const MedAp = () => {
     const tab = <>&nbsp;&nbsp;&nbsp;&nbsp;</>;
     return (
         <View style={styles.container}>
-            <Button aling='left'>
-                Back
-            </Button>
+            <VStack alignItems={"center"}>
+                <Button marginTop="2" colorScheme="indigo" title='Menu' onPress={() => navigation.navigate('Menu')} style={{ width: "40%" }}> Back</Button>
+
+            </VStack>
             <Box safeArea p="2" py="8" w="90%" maxW="400">
 
                 <div aling='center'>
@@ -46,51 +46,52 @@ const MedAp = () => {
                     </Heading>
                 </div>
 
-                {tab}
-                {tab}
-                <Box>
-                    <Text>
-                        APPLICANT: Maria Luisa Ruiz
-                        TELEPHONE: 449 198 2734
-                    </Text>
-                </Box>
+                <View style={styles.paragraph}>
+                    <Box>
+                        <Text>
+                            APPLICANT: Maria Luisa Ruiz
+                            TELEPHONE: 449 198 2734
+                        </Text>
+                    </Box>
 
-                <div style={{ display: 'flex', justifyContent: 'Middle', marginTop: '50px', marginRight: '300px' }}>
-                    <table style={{ border: "1px solid rgb(0, 0, 0)" }} width="100%" className="Tablita"  >
-                        <thead>
-                            <tr>
-                                <th style={{ border: "2px solid rgb(0, 0, 0)" }}> Image </th>
-                                <th style={{ border: "2px solid rgb(0, 0, 0)" }}> Doctor </th>
-                                <th style={{ border: "2px solid rgb(0, 0, 0)" }}> Hospital </th>
-                                <th style={{ border: "2px solid rgb(0, 0, 0)" }}> Date </th>
-                                <th style={{ border: "2px solid rgb(0, 0, 0)" }}> Time </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> Jonathan Josué Villanueva Guerrero </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> Hopital Ojocaliente </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> 23/09/2022 </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> 13:45 </th>
-                            </tr>
-                            <tr>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/Dogtor.jpg")} /> </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> Dogtor </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> Hopital de la Mujer </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> 26/12/2022 </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> 10:35 </th>
-                            </tr>
-                            <tr>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/FF7D.jpg")} /> </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> Fulgencio López</th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> ISSSTE </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> 12/04/2022 </th>
-                                <th style={{ border: "1px solid rgb(0, 0, 0)" }}> 17:45 </th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    <div style={{ display: 'flex', justifyContent: 'Middle', marginTop: '50px', marginRight: '300px' }}>
+                        <table style={{ border: "1px" }} width="100%" className="Tablita"  >
+                            <thead>
+                                <tr>
+                                    <th > Image </th>
+                                    <th > Doctor </th>
+                                    <th > Hospital </th>
+                                    <th > Date </th>
+                                    <th > Time </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th style={{ border: "1px" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/DocJ.jpeg")} /> </th>
+                                    <th style={{ border: "1px" }}> Jonathan Josué Villanueva Guerrero </th>
+                                    <th style={{ border: "1px" }}> Hopital Ojocaliente </th>
+                                    <th style={{ border: "1px" }}> 23/09/2022 </th>
+                                    <th style={{ border: "1px" }}> 13:45 </th>
+                                </tr>
+                                <tr>
+                                    <th style={{ border: "1px" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/Dogtor.jpg")} /> </th>
+                                    <th style={{ border: "1px" }}> Dogtor </th>
+                                    <th style={{ border: "1px" }}> Hopital de la Mujer </th>
+                                    <th style={{ border: "1px" }}> 26/12/2022 </th>
+                                    <th style={{ border: "1px" }}> 10:35 </th>
+                                </tr>
+                                <tr>
+                                    <th style={{ border: "1px" }}>  <Image style={{ width: 50, height: 50, marginBottom: 15, alignContent: 'center' }} source={require("./Imagenes/FF7D.jpg")} /> </th>
+                                    <th style={{ border: "1px" }}> Fulgencio López</th>
+                                    <th style={{ border: "1px" }}> ISSSTE </th>
+                                    <th style={{ border: "1px" }}> 12/04/2022 </th>
+                                    <th style={{ border: "1px" }}> 17:45 </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </View>
+
                 {tab}
                 {tab}
                 {tab}

@@ -9,12 +9,23 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator, DrawerContentScrollView } from "@react-navigation/drawer";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { DrawerNavigation } from "./Stack";
+import Constants from 'expo-constants';
 
 const Drawer = createDrawerNavigator()
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      paddingTop: Constants.statusBarHeight,
+      backgroundColor: '#FFFFFF',
+      padding: 8,
+  },
+});
+
 const Menu = () => {
   const navigation = useNavigation();
   return (
-    <Box safeArea p="2" py="8" w="90%" maxW="400">
+    <View style={styles.container}>
+      <Box safeArea p="2" py="8" w="90%" maxW="400">
       
       <Heading size="lg" fontWeight="600" _dark={{
         color: "black"
@@ -68,7 +79,9 @@ const Menu = () => {
         Profile
       </Button>
     </Box>
-
+    </View>
+    
+    
   );
 }
 
